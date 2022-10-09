@@ -1,0 +1,7 @@
+[user]
+	name = PrimeO7
+	email = nowak.philipp97@gmail.com
+[init]
+	defaultBranch = main
+[log]
+	date = iso8601-strict
