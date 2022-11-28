@@ -1,0 +1,17 @@
+# Config for sxhkd
+# manager for custom hotkeys
+# https://github.com/baskerville/sxhkd
+# https://wiki.archlinux.org/title/Sxhkd
+
+# Restart sxhkd
+super + F12
+	pkill -SIGUSR1 -x sxhkd
+# Terminal
+super + Return
+	$TERMINAL
+# Flameshot Screenshot
+super + shift + s
+	flameshot gui
+# Browser
+super + f
+	$BROWSER
