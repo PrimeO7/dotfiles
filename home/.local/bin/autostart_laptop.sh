@@ -20,3 +20,6 @@ sxhkd &
 # xmodmap -e 'clear Lock'
 # sleep 3
 # xmodmap -e 'keycode 66 = Escape'
+
+# networkmanager
+rfkill unblock all # needed because rfkill softblocks after suspend 
