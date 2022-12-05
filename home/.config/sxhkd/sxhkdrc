@@ -18,3 +18,6 @@ super + f
 # Restart Wireless Connections
 super + Delete
 	rfkill unblock all
+# Lock Screen
+super + l
+	qdbus org.freedesktop.ScreenSaver /ScreenSaver Lock
