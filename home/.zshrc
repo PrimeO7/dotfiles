@@ -77,6 +77,7 @@ alias gls='git log --show-signature --graph --abbrev-commit'
 # ALIASES FOR 42CURSUS
 alias francinette=/home/philipp/francinette/tester.sh
 alias paco=/home/philipp/francinette/tester.sh
+alias 42exam='cd ~/Downloads && bash -c "$(curl https://grademe.fr)"'
 
 # ALIASES FOR PACKAGE MANAGEMENT
 alias pacs="pacman -Slq | fzf --multi --preview 'pacman -Si {}' | xargs -ro sudo pacman -S"
