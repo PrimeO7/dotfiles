@@ -73,6 +73,7 @@ alias cb='xclip -selection clipboard'
 
 # ALIASES FOR GIT
 alias gls='git log --show-signature --graph --abbrev-commit'
+alias grt='cd "$(git rev-parse --show-toplevel)"'
 
 # ALIASES FOR 42CURSUS
 alias francinette=/home/philipp/francinette/tester.sh
