@@ -70,6 +70,7 @@ alias grep='grep --color=auto'
 alias ls='ls --color=auto'
 alias l='ls -lAh'
 alias cb='xclip -selection clipboard'
+alias zzz='systemctl hibernate'
 
 # ALIASES FOR GIT
 alias gls='git log --show-signature --graph --abbrev-commit'
