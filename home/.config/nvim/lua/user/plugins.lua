@@ -55,7 +55,10 @@ return packer.startup(function(use)
           vim.api.nvim_command "colorscheme catppuccin"
       end
   }
+  -- 42 Header Plugin
   use "42Paris/42header"
+  -- Discord Rich Presence Plugin
+  use "andweeb/presence.nvim"
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
