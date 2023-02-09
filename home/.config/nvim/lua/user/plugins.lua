@@ -38,13 +38,18 @@ packer.init {
   },
 }
 
--- Install your plugins here
+--------------------- Install your plugins here --------------------------------
 return packer.startup(function(use)
-  -- My plugins here
-  use "wbthomason/packer.nvim" -- Have packer manage itself
-  use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
-  use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
---  use "cacharle/c_formatter_42.vim" -- Plugin for C_Formatting_Norminette
+  -- Have packer manage itself
+  use "wbthomason/packer.nvim"
+
+  -- An implementation of the Popup API from vim in Neovim
+  use "nvim-lua/popup.nvim"
+
+  -- Useful lua functions used by lots of plugins
+  use "nvim-lua/plenary.nvim"
+
+  -- Colorscheme catppuccin for nvim
   use {
       "catppuccin/nvim",
       as = "catppuccin",
@@ -55,10 +60,16 @@ return packer.startup(function(use)
           vim.api.nvim_command "colorscheme catppuccin"
       end
   }
+
   -- 42 Header Plugin
   use "42Paris/42header"
+
   -- Discord Rich Presence Plugin
   use "andweeb/presence.nvim"
+
+
+------------------------End of plugins------------------------------------------
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
