@@ -1,6 +1,13 @@
--- The setup config table shows all available config options with their default values:
-local presence = require("presence")
-presence.setup({
+-- Discord Rich Presence plugin for Neovim
+-- https://github.com/andweeb/presence.nvim
+
+local status, presence = pcall(require, "presence")
+if not status then
+	vim.notify("plugin: presence\n not found")
+	return
+end
+
+presence.setup {
 --     General options
     auto_update         = true,                       --Update activity based on autocmd events (if `false`, map or manually execute `:lua package.loaded.presence:update()`)
     neovim_image_text   = "The One True Text Editor", -- Text displayed when hovered over the Neovim image
@@ -22,4 +29,4 @@ presence.setup({
     reading_text        = "Reading %s",               -- Format string rendered when a read-only or unmodifiable file is loaded in the buffer (either string or function(filename: string): string)
     workspace_text      = "Working on %s",            -- Format string rendered when in a git repository (either string or function(project_name: string|nil, filename: string): string)
     line_number_text    = "Line %s out of %s",        -- Format string rendered when `enable_line_number` is set to true (either string or function(line_number: number, line_count: number): string)
-})
+}
