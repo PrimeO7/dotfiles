@@ -1,3 +1,6 @@
 # GnuPG
 gnupg
 !gpg-agent.conf
+
+# NeoVim
+packer_compiled.lua
