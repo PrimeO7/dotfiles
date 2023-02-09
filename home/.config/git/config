@@ -2,13 +2,20 @@
 	name = PrimeO7
 	email = nowak.philipp97@gmail.com
 	signingkey = nowak.philipp97@gmail.com
+[credential]
+    helper = cache --timeout 3600
 [init]
 	defaultBranch = main
 [log]
 	date = iso8601-strict
 [commit]
 	gpgSign = true
+	verbose = true
 [tag]
 	gpgSign = true
 [push]
 	gpgSign = if-asked
+[diff]
+    colorMoved = default
+[status]
+	showUntrackedFiles = all
