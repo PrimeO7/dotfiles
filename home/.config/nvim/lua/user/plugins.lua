@@ -50,16 +50,7 @@ return packer.startup(function(use)
   use "nvim-lua/plenary.nvim"
 
   -- Colorscheme catppuccin for nvim
-  use {
-      "catppuccin/nvim",
-      as = "catppuccin",
-      config = function()
-          require("catppuccin").setup {
-              flavour = "mocha" -- mocha, macchiato, frappe, latte
-          }
-          vim.api.nvim_command "colorscheme catppuccin"
-      end
-  }
+  use "catppuccin/nvim"
 
   -- 42 Header Plugin
   use "42Paris/42header"
