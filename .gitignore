@@ -4,3 +4,4 @@ gnupg
 
 # NeoVim
 packer_compiled.lua
+.luarc.json

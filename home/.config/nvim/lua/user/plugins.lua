@@ -64,11 +64,17 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-path" -- Path completions
   use "hrsh7th/cmp-cmdline" -- Cmdline completions
   use "hrsh7th/cmp-nvim-lua" -- Nvim luascript completions
+  use "hrsh7th/cmp-nvim-lsp" -- Nvim lsp completions
   use "saadparwaiz1/cmp_luasnip" -- Snippet completions
 
   -- Snippets
   use "L3MON4D3/LuaSnip" -- Main Snippet plugin
-  use "rafamadriz/friendly-snippets" -- Collection of snippets
+  use "rafamadriz/friendly-snippets" -- Collection of Snippets
+
+  -- Lsp
+  use "neovim/nvim-lspconfig" -- Main Lsp plugin
+  use "williamboman/mason.nvim" -- Lsp Installer plugin
+  use "williamboman/mason-lspconfig.nvim" -- Automatically install Lsp servers
 
 ------------------------End of plugins------------------------------------------
 
