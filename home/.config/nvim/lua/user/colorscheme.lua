@@ -8,6 +8,6 @@ if not status then
 end
 
 catppuccin.setup {
-  flavour = "mocha" -- mocha, macchiato, frappe, latte
+	flavour = "mocha" -- mocha, macchiato, frappe, latte
 }
 vim.cmd.colorscheme("catppuccin")

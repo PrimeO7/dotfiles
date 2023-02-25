@@ -16,11 +16,11 @@ mason.setup()
 local status, mason_lspconfig = pcall(require, "mason-lspconfig")
 if not status then
 	vim.notify("plugin: mason-lspconfig\n not found")
-  return
+	return
 end
 
 mason_lspconfig.setup {
-  ensure_installed = {
-    "lua_ls",
-  }
+	ensure_installed = {
+		"lua_ls",
+	}
 }
