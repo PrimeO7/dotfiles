@@ -15,6 +15,7 @@ xrandr --output eDP-1 --primary --mode 1920x1280 --rotate normal --rate 60
 # sleep 5 && noisetorch -i 'alsa_input.usb-CMEDIA_Q9-1-00.mono-fallback' &
 
 # keyboard - eurkey and escape bound to capslock
+xset r rate 300 50
 sxhkd &
 # setxkbmap eu
 # xmodmap -e 'clear Lock'
