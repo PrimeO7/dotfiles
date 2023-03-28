@@ -73,7 +73,7 @@ return packer.startup(function(use)
 
 	-- Lsp
 	use "neovim/nvim-lspconfig" -- Main Lsp plugin
-	use "williamboman/mason.nvim" -- Lsp Installer plugin
+	use {"williamboman/mason.nvim", commit = "a192887fd0c29275cf2acb4a83bcbdf63399f8df"} -- Lsp Installer plugin
 	use "williamboman/mason-lspconfig.nvim" -- Automatically install Lsp servers
 
 	------------------------End of plugins------------------------------------------
