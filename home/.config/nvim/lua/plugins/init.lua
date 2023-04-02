@@ -7,6 +7,4 @@ return {
 
 	-- Lsp
 	"neovim/nvim-lspconfig", -- Main Lsp plugin
-	"williamboman/mason.nvim", -- Lsp Installer plugin
-	"williamboman/mason-lspconfig.nvim", -- Automatically install Lsp servers
 }
