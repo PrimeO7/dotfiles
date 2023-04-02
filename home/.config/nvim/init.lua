@@ -1,6 +1,6 @@
 require "user.options"
 require "user.keymaps"
-require "user.plugins"
+require "user.lazy"
 
 -- Load Plugins
 require "user.42header"
