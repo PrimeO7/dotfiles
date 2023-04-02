@@ -62,6 +62,9 @@ fi
 # Starship prompt
 eval "$(starship init zsh)"
 
+# Set LS_COLORS environment variable.
+eval "$(dircolors)"
+
 # ALIASES GENERAL
 alias v='nvim'
 alias diff='diff --color=auto'
@@ -71,6 +74,7 @@ alias ls='ls --color=auto'
 alias l='ls -lAh'
 alias cb='xclip -selection clipboard'
 alias zzz='systemctl hibernate'
+alias dot='cd ~/dotfiles'
 
 # ALIASES FOR GIT
 alias gls='git log --show-signature --graph --abbrev-commit'
