@@ -5,9 +5,6 @@ return {
 	-- Useful lua functions used by lots of plugins
 	"nvim-lua/plenary.nvim",
 
-	-- Discord Rich Presence Plugin
-	"andweeb/presence.nvim",
-
 	-- Autocomplete Plugins
 	"hrsh7th/nvim-cmp", -- Main plugin
 	"hrsh7th/cmp-buffer", -- Buffer completions
