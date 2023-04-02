@@ -5,9 +5,6 @@ return {
 	-- Useful lua functions used by lots of plugins
 	"nvim-lua/plenary.nvim",
 
-	-- Colorscheme catppuccin for nvim
-	"catppuccin/nvim",
-
 	-- 42 Header Plugin
 	"42Paris/42header",
 
