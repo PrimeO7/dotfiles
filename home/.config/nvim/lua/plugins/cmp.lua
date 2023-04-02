@@ -9,7 +9,6 @@ return {
 	dependencies = {
 		"hrsh7th/cmp-buffer", -- Buffer completions
 		"hrsh7th/cmp-path",  -- Path completions
-		"hrsh7th/cmp-cmdline", -- Cmdline completions
 		"hrsh7th/cmp-nvim-lua", -- Nvim luascript completions
 		"hrsh7th/cmp-nvim-lsp", -- Nvim lsp completions
 		"saadparwaiz1/cmp_luasnip", -- Snippet completions
@@ -114,7 +113,6 @@ return {
 						--		luasnip = "[Luasnip]",
 						buffer = "[Buffer]",
 						path = "[Path]",
-						cmdline = "[Cmd]",
 						nvim_lua = "[Nvim]",
 					})[entry.source.name]
 					return vim_item
@@ -125,7 +123,6 @@ return {
 				--	{ name = "luasnip" },
 				{ name = "buffer" },
 				{ name = "path" },
-				{ name = "cmdline" },
 				{ name = "nvim_lua" },
 			},
 			confirm_opts = {
