@@ -7,6 +7,16 @@ return {
 		"mason-lspconfig.nvim",
 	},
 	config = function()
+		local function normal_map(keys, func, desc)
+			vim.keymap.set("n", keys, func, { desc = desc })
+		end
+		-- Global mappings.
+		-- See `:help vim.diagnostic.*` for documentation on any of the below functions
+		normal_map("<leader>d", vim.diagnostic.open_float, "Open Diagnostic")
+		normal_map("[d", vim.diagnostic.goto_prev, "Previous Diagnostic")
+		normal_map("]d", vim.diagnostic.goto_next, "Next Diagnostic")
+		normal_map("<leader>q", vim.diagnostic.setloclist, "Diagnostic set loclist")
+
 		local options = require("plugins.lsp.options")
 		require("lspconfig").lua_ls.setup {
 			settings = {
