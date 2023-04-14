@@ -18,6 +18,8 @@ return {
 		normal_map("<leader>q", vim.diagnostic.setloclist, "Diagnostic set loclist")
 
 		local options = require("plugins.lsp.options")
+
+		-- lua-language-server for lua
 		require("lspconfig").lua_ls.setup {
 			settings = {
 				Lua = {
@@ -40,6 +42,12 @@ return {
 					},
 				},
 			},
+			on_attach = options.on_attach,
+			flags = options.lsp_flags,
+			capabilities = options.capabilities,
+		}
+		-- clangd for C, C++ 
+		require("lspconfig").clangd.setup {
 			on_attach = options.on_attach,
 			flags = options.lsp_flags,
 			capabilities = options.capabilities,
