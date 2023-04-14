@@ -66,34 +66,34 @@ eval "$(starship init zsh)"
 eval "$(dircolors)"
 
 # ALIASES GENERAL
-alias v='nvim'
-alias diff='diff --color=auto'
-alias ip='ip -color=auto'
-alias grep='grep --color=auto'
-alias ls='ls --color=auto'
-alias l='ls -lAh'
 alias cb='xclip -selection clipboard'
-alias zzz='systemctl hibernate'
+alias diff='diff --color=auto'
 alias dot='cd ~/dotfiles'
+alias grep='grep --color=auto'
+alias ip='ip -color=auto'
+alias l='ls -lAh'
+alias ls='ls --color=auto'
+alias v='nvim'
+alias zzz='systemctl hibernate'
 
 # ALIASES FOR GIT
+alias gan='git ls-files --others --exclude-standard | fzf --preview "bat --force-colorization {}" | xargs git add'
+alias gat='git diff --name-only | fzf --preview "git diff {} | delta" | xargs git add'
+alias gdiff='git diff --name-only | fzf --preview "git diff {} | delta" | xargs git diff'
 alias gls='git log --show-signature --graph --abbrev-commit --all'
 alias grt='cd "$(git rev-parse --show-toplevel)"'
 alias gs='git status'
-alias gat='git diff --name-only | fzf --preview "git diff {} | delta" | xargs git add'
-alias gan='git ls-files --others --exclude-standard | fzf --preview "bat --force-colorization {}" | xargs git add'
-alias gdiff='git diff --name-only | fzf --preview "git diff {} | delta" | xargs git diff'
 
 # ALIASES FOR 42CURSUS
+alias 42exam='cd ~/Downloads && bash -c "$(curl https://grademe.fr)"'
 alias francinette=/home/philipp/francinette/tester.sh
 alias paco=/home/philipp/francinette/tester.sh
-alias 42exam='cd ~/Downloads && bash -c "$(curl https://grademe.fr)"'
 
 # ALIASES FOR PACKAGE MANAGEMENT
-alias pacs="pacman -Slq | fzf --multi --preview 'pacman -Si {}' | xargs -ro sudo pacman -S"
+alias aurs="paru -Slq | fzf --multi --preview 'paru -Si {}' | xargs -ro paru -S"
 alias pacq="pacman -Qq | fzf --multi --preview 'pacman -Qi {}' | xargs -ro pacman -Qi"
 alias pacr="pacman -Qq | fzf --multi --preview 'pacman -Qi {}' | xargs -ro sudo pacman -Rns"
-alias aurs="paru -Slq | fzf --multi --preview 'paru -Si {}' | xargs -ro paru -S"
+alias pacs="pacman -Slq | fzf --multi --preview 'pacman -Si {}' | xargs -ro sudo pacman -S"
 
 # GPG PINENTRY
 export GPG_TTY=$(tty)
