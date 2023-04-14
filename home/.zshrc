@@ -79,6 +79,10 @@ alias dot='cd ~/dotfiles'
 # ALIASES FOR GIT
 alias gls='git log --show-signature --graph --abbrev-commit --all'
 alias grt='cd "$(git rev-parse --show-toplevel)"'
+alias gs='git status'
+alias gat='git diff --name-only | fzf --preview "git diff {} | delta" | xargs git add'
+alias gan='git ls-files --others --exclude-standard | fzf --preview "bat --force-colorization {}" | xargs git add'
+alias gdiff='git diff --name-only | fzf --preview "git diff {} | delta" | xargs git diff'
 
 # ALIASES FOR 42CURSUS
 alias francinette=/home/philipp/francinette/tester.sh
