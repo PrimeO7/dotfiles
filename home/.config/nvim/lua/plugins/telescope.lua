@@ -37,5 +37,10 @@ return {
 			multi_icon = ">>",
 			preview = { hide_on_startup = false }, -- maybe change to toggle
 		},
+		pickers = {
+			find_files = {
+				find_command = { "fd", "--type", "f", "--follow", "--hidden" },
+			},
+		},
 	}
 }
