@@ -77,7 +77,7 @@ alias zzz='systemctl hibernate'
 alias dot='cd ~/dotfiles'
 
 # ALIASES FOR GIT
-alias gls='git log --show-signature --graph --abbrev-commit'
+alias gls='git log --show-signature --graph --abbrev-commit --all'
 alias grt='cd "$(git rev-parse --show-toplevel)"'
 
 # ALIASES FOR 42CURSUS
