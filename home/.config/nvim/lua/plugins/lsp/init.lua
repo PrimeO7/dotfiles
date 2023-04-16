@@ -67,6 +67,7 @@ return {
 		dependencies = { "nvim-lua/plenary.nvim" },
 		opts = function()
 			local null_ls = require("null-ls")
+			local c_formatter_42 = require("plugins.lsp.null-ls.c_formatter_42")
 			return {
 				sources = {
 					-- diagnostics for shellscript
@@ -75,6 +76,8 @@ return {
 					null_ls.builtins.diagnostics.commitlint,
 					-- formatting for lua
 					null_ls.builtins.formatting.stylua,
+					-- custom formatting for c in 42Norm
+					c_formatter_42,
 				},
 			}
 		end,
