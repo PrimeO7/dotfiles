@@ -1,3 +1,6 @@
+-- special settings for c files
+
+-- disable clangd formatter
 vim.keymap.set("n", "<leader>n", function()
 	vim.lsp.buf.format({
 		async = true,

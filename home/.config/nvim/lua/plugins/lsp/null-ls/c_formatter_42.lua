@@ -1,3 +1,6 @@
+-- custom formatter for c files, 42Norm conform
+-- https://github.com/dawnbeen/c_formatter_42
+
 local null_ls = require("null-ls")
 local helpers = require("null-ls.helpers")
 
