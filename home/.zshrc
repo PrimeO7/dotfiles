@@ -77,9 +77,9 @@ alias v='nvim'
 alias zzz='systemctl hibernate'
 
 # ALIASES FOR GIT
-alias gan='git ls-files --others --exclude-standard | fzf --preview "bat --force-colorization {}" | xargs git add'
-alias gat='git diff --name-only | fzf --preview "git diff {} | delta" | xargs git add'
-alias gdiff='git diff --name-only | fzf --preview "git diff {} | delta" | xargs git diff'
+alias gan='git ls-files --others --exclude-standard | fzf --multi --preview "bat --force-colorization {}" | xargs git add'
+alias gat='git diff --name-only | fzf --multi --preview "git diff {} | delta" | xargs git add'
+alias gdiff='git diff --name-only | fzf --multi --preview "git diff {} | delta" | xargs git diff'
 alias gls='git log --show-signature --graph --abbrev-commit --all'
 alias grt='cd "$(git rev-parse --show-toplevel)"'
 alias gs='git status'
