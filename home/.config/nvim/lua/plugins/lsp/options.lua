@@ -1,6 +1,9 @@
 -- config for the Nvim LSP client
 -- https://github.com/neovim/nvim-lspconfig
 
+-- https://github.com/jose-elias-alvarez/null-ls.nvim/wiki/Avoiding-LSP-formatting-conflicts
+-- specify which formatter to use for filetype if you can't disable lsp formatter.
+
 local M = {}
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
@@ -23,7 +26,16 @@ M.on_attach = function(client, bufnr)
 		print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
 	end, "Workspace list folders")
 	normal_map("<leader>n", function()
-		vim.lsp.buf.format({ async = true })
+		vim.lsp.buf.format({
+			async = true,
+			filter = function(client)
+				if vim.bo.filetype == "c" then
+					return client.name == "null-ls"
+				else
+					return true
+				end
+			end,
+		})
 	end, "Autoformat file")
 	normal_map("<leader>D", vim.lsp.buf.type_definition, "Go to Type_definition")
 	normal_map("<leader>rn", vim.lsp.buf.rename, "Rename")
