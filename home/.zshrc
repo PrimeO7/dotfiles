@@ -88,6 +88,8 @@ alias gs='git status'
 alias 42exam='cd ~/Downloads && bash -c "$(curl https://grademe.fr)"'
 alias francinette=/home/philipp/francinette/tester.sh
 alias paco=/home/philipp/francinette/tester.sh
+alias c4='cd ~/programming/42cursus'
+alias c4v='cd ~/programming/42cursus; $EDITOR'
 
 # ALIASES FOR PACKAGE MANAGEMENT
 alias aurs="paru -Slq | fzf --multi --preview 'paru -Si {}' | xargs -ro paru -S"
