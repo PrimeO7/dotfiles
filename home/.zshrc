@@ -8,8 +8,8 @@ autoload -U colors && colors
 
 # History
 HISTFILE=~/.cache/zsh/history
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=10000
+SAVEHIST=10000
 
 # Basic auto/tab completion
 autoload -Uz compinit
@@ -75,6 +75,7 @@ alias l='ls -lAh'
 alias ls='ls --color=auto'
 alias v='nvim'
 alias zzz='systemctl hibernate'
+alias boot-bios='systemctl reboot --firmware-setup'
 
 # ALIASES FOR GIT
 alias gan='git ls-files --others --exclude-standard | fzf --multi --preview "bat --force-colorization {}" | xargs git add'
@@ -90,12 +91,17 @@ alias francinette=/home/philipp/francinette/tester.sh
 alias paco=/home/philipp/francinette/tester.sh
 alias c4='cd ~/programming/42cursus'
 alias c4v='cd ~/programming/42cursus; $EDITOR'
+alias mstest="bash /home/philipp/42_minishell_tester/tester.sh"
 
 # ALIASES FOR PACKAGE MANAGEMENT
 alias aurs="paru -Slq | fzf --multi --preview 'paru -Si {}' | xargs -ro paru -S"
 alias pacq="pacman -Qq | fzf --multi --preview 'pacman -Qi {}' | xargs -ro pacman -Qi"
 alias pacr="pacman -Qq | fzf --multi --preview 'pacman -Qi {}' | xargs -ro sudo pacman -Rns"
 alias pacs="pacman -Slq | fzf --multi --preview 'pacman -Si {}' | xargs -ro sudo pacman -S"
+
+# ALIASES FOR MPV
+alias yt='mpv --ytdl-format="bestvideo[height<=1440]+bestaudio/best" "$(xclip -selection clipboard -out)"'
+alias waffle='streamlink --player=mpv --twitch-low-latency --twitch-disable-ads twitch.tv/giantwaffle best'
 
 # GPG PINENTRY
 export GPG_TTY=$(tty)
