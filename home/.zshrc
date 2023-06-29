@@ -103,6 +103,9 @@ alias pacs="pacman -Slq | fzf --multi --preview 'pacman -Si {}' | xargs -ro sudo
 alias yt='mpv --ytdl-format="bestvideo[height<=1440]+bestaudio/best" "$(xclip -selection clipboard -out)"'
 alias waffle='streamlink --player=mpv --twitch-low-latency --twitch-disable-ads twitch.tv/giantwaffle best'
 
+# ALIASES FOR ARCHWIKI
+alias aw='firefox /usr/share/doc/arch-wiki/html/en/$( ls /usr/share/doc/arch-wiki/html/en/| fzf )'
+
 # GPG PINENTRY
 export GPG_TTY=$(tty)
 
