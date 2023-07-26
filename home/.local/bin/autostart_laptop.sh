@@ -9,6 +9,7 @@ sleep 5
 xrandr --output eDP-1 --primary --mode 1920x1280 --rotate normal --rate 60
 
 # Display Power Management Signaling
+# disables screensaver and dpms
 # xset s off -dpms
 
 # noisetorch
