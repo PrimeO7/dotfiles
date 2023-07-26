@@ -76,6 +76,7 @@ alias ls='ls --color=auto'
 alias v='nvim'
 alias zzz='systemctl hibernate'
 alias boot-bios='systemctl reboot --firmware-setup'
+alias mirror='sudo reflector --verbose --latest 8 --sort rate --protocol https --save /etc/pacman.d/mirrorlist'
 
 # ALIASES FOR GIT
 alias gan='git ls-files --others --exclude-standard | fzf --multi --preview "bat --force-colorization {}" | xargs git add'
@@ -100,7 +101,8 @@ alias pacr="pacman -Qq | fzf --multi --preview 'pacman -Qi {}' | xargs -ro sudo 
 alias pacs="pacman -Slq | fzf --multi --preview 'pacman -Si {}' | xargs -ro sudo pacman -S"
 
 # ALIASES FOR MPV
-alias yt='mpv --ytdl-format="bestvideo[height<=1440]+bestaudio/best" "$(xclip -selection clipboard -out)"'
+alias yt='mpv --profile=Youtube-1440p "$(xclip -selection clipboard -out)"'
+alias yt4k='mpv --profile=Youtube-4K "$(xclip -selection clipboard -out)"'
 alias waffle='streamlink --player=mpv --twitch-low-latency --twitch-disable-ads twitch.tv/giantwaffle best'
 
 # ALIASES FOR ARCHWIKI
